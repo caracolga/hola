@@ -1,32 +1,48 @@
 // PRIMERO CREAMOS UNA VARIABLE QUE CONTIENE TODOS LOS DATOS DE TUS TRABAJOS
 var trabajos = [
 {
-    figure: "media/foto-01.jpg",
-    title: "Lorem ipsum 01",
+    figure: "media/apeiron.jpg",
+    title: "Ápeiron",
+    about: "Revista dedicada a la opinión y debate entorno al suicidio",
+}, {
+    figure: "media/lampara.jpg",
+    title: "Lámpara de sulfato de cobre",
+    about: "Experimentación con material para la creación de luminaria",
+}, {
+    figure: "media/triza.jpg",
+    title: "Triza",
+    about: "Cocktail ahumado en base a licor de plátano, jarabe de porotos y sake, servido en berenjena subzero",
+}, {
+    figure: "media/gertrudis.jpg",
+    title: "Revista Literaria",
+    about: "Acá la va la cuarta",
+}, {
+    figure: "media/cartavendettabakery.jpg",
+    title: "Carta Vendetta Bakery",
+    about: "Rediseño Carta principal y de bebestibles Vendetta Bakery",
+}, {
+    figure: "media/MH.jpg",
+    title: "Maniobra H",
+    about: "Acá la va la sexta",
+}, {
+    figure: "media/quimera.jpg",
+    title: "Tipografía Quimera",
     about: "Nulla pretium non sapien eget fermentum",
 }, {
-    figure: "media/foto-02.jpg",
-    title: "Lorem ipsum 02",
+    figure: "media/perrosbella.jpg",
+    title: "Perros de Bellavista",
+    about: "Fanzine sobre estudio etnográfico de perros callejeros de Bellavista",
+}, {
+    figure: "media/lavadora.jpg",
+    title: "Afiche Lavadora Panasonic",
     about: "Nulla pretium non sapien eget fermentum",
 }, {
-    figure: "media/foto-03.jpg",
-    title: "Lorem ipsum 03",
+    figure: "media/ramonojos.jpg",
+    title: "OPHIC",
     about: "Nulla pretium non sapien eget fermentum",
 }, {
-    figure: "media/foto-04.jpg",
-    title: "Lorem ipsum 04",
-    about: "Nulla pretium non sapien eget fermentum",
-}, {
-    figure: "media/foto-05.jpg",
-    title: "Lorem ipsum 05",
-    about: "Nulla pretium non sapien eget fermentum",
-}, {
-    figure: "media/foto-06.jpg",
-    title: "Lorem ipsum 06",
-    about: "Nulla pretium non sapien eget fermentum",
-}, {
-    figure: "media/foto-07.jpg",
-    title: "Lorem ipsum 07",
+    figure: "media/repu.jpg",
+    title: "REPÜ",
     about: "Nulla pretium non sapien eget fermentum",
 }
 ]

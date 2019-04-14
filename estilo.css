@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,500,500i');
 
 *{
 	margin:0;
@@ -10,14 +10,19 @@
 /* ALGUNAS DEFINICIONES GENÉRICAS */
 
 body{
-	font-family: 'Space Mono', monospace;
-	background:rgba(255,255,255,1);
+	font-family: 'Fira Sans', sans-serif;
+	background:rgba(239,222,219,1);
 	color:rgba(100,100,100,1);
 }
 
-h1, h2, h3, h4{
-	font-weight:300;
-	font-family: 'Open Sans Condensed', sans-serif;
+svg {
+	width: 100px;
+	fill: rgba(255,255,255,1);
+}
+
+
+h1, h3, h4{
+	font-family: 'Rakkas', cursive;
 }
 
 h1{
@@ -28,7 +33,7 @@ h1{
 }
 
 h2{
-	font-size:2rem;
+	font-size:1.5rem;
 	letter-spacing:0.1em;
 	color:rgba(255,255,255,0.9);
 	text-align:center;
@@ -37,18 +42,19 @@ h2{
 h3{
 	font-size:1.5rem;
 	letter-spacing:0.1em;
-	color:rgba(0,0,0,0.9);
+	color:rgba(36,43,127,0.95);
 	text-align:center;
 	padding:1rem 0;
 }
 
 a{
-	color:rgba(155,0,0,1);
+	font-size: 1rem;
+	color:rgba(36,43, 127,1);
 	text-decoration:none;
 }
 
 a:hover{
-	color:rgba(255,0,0,1);
+	color:rgba(0,0,255,1);
 	text-decoration:underline;
 }
 
@@ -73,7 +79,6 @@ video{
 
 #somos{
 	width:100%;
-	background:rgb(250,250,250);
 	margin-bottom:2%;
 	}
 
@@ -81,34 +86,35 @@ video{
 	width:46%;
 	padding:2%;
 	float:left;
-	background-color:red;
 	}
 
 .primera{
 	min-height:300px;
 	text-align:left;
-	background-color:rgba(225, 225, 225, 1.00);
+	background-color:rgba(248, 192, 203, 1.00);
 	background-image:url('media/dupla-01.jpg');
 	background-position:top right;
 	background-repeat:no-repeat;
 	background-size:auto 100%;
 }
+
 .primera h4{padding: 2% 40% 1% 2%;}
 
 .primera h5{padding: 1% 40% 2% 2%; margin-bottom:5em; letter-spacing:0.1em;}
 
 .primera p{padding: 2% 40% 2% 2%;}
 
-.primera address{padding: 2% 40% 2% 2%; font-size:0.9em; font-style:normal;}
+.primera address{padding: 2% 40% 2% 2%; font-size:0.9em; font-style:normal; color: rgba(42, 49, 121, 1)}
 
 .segunda{
-	min-height:300px;
+	min-height:250px;
 	text-align:right;
-	background-color:rgba(235, 235, 235, 1.00);
-	background-image:url('media/dupla-02.jpg');
+	background-color:rgba(248, 192, 203, 1.00);
+	background-image:url('media/foto-olga.jpg');
 	background-position:top left;
 	background-repeat:no-repeat;
 	background-size:auto 100%;
+	margin-left:21%;
 }
 
 .segunda h4{padding: 2% 2% 1% 40%;}
@@ -127,19 +133,18 @@ video{
 #portafolio{
 	width:100%;
 	padding-bottom:1%;
-	background:linear-gradient(to bottom, #eee, #aaa);
+	background:linear-gradient(to bottom, #EFDEDC, #F6C0CB);
 }
 
 .item {
-	width:23%;
+	width:31.3%;
 	margin:1%;
 	color:#333;
-	background:white;
-	box-shadow:0 0 5px rgba(0,0,0,.5);
+	background:rgba(248, 192, 203, 0.5);
 }
 
 .item:hover{
-	cursor:crosshair;
+	cursor:pointer;
 }
 
 .item figure{
@@ -150,12 +155,12 @@ video{
 	width:100%;
 	height:auto;
 	margin-bottom:-4px;
-	filter: grayscale(1);
+	filter: blur(0px);
 }
 
 .item:hover figure img{
-	transform:scale(2);
-	filter: grayscale(0);
+	transform: scale(1.1);
+	filter: blur(1px);
 	transition:all ease-out 1s;
 }
 
@@ -169,6 +174,7 @@ video{
 	font-size:0.875em;
 	letter-spacing:0.05em;
 	margin:2% 5% 6% 5%;
+
 }
 
 footer{
@@ -188,7 +194,7 @@ footer p{
 @media screen and (orientation: portrait){
 
 	.dupla{
-		width:96%;
+		width:75%;
 		padding:2%;
 		float:left;
 	}
