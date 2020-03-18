@@ -1,99 +1,48 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>corta y fome</title>
-    <meta name="title" content="corta y fome">
-    <link rel="icon" type="image/png" href="media/favicon1-02.png" />
-    <!-- Metadatos Genéricos -->
-    <meta name="description" content="ED • portafolio">
-    <meta name="image" content="https://66.media.tumblr.com/778aeb4d504d96f2641384c66f5d0a6a/tumblr_ppz5x6Jiin1wvp22vo1_1280.png">
-    <!-- Metadatos para Schema.org for Google -->
-    <meta itemprop="name" content="corta y fome">
-    <meta itemprop="description" content="ED • portafolio">
-    <meta itemprop="image" content="https://66.media.tumblr.com/778aeb4d504d96f2641384c66f5d0a6a/tumblr_ppz5x6Jiin1wvp22vo1_1280.png">
-    <!-- Metadatos para Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="corta y fome">
-    <meta name="twitter:description" content="ED • portafolio">
-    <meta name="twitter:image" content="media/favicon1-02.png">
-    <!-- Metadatos para Open Graph general (Facebook y Pinterest) -->
-    <meta name="og:title" content="corta y fome">
-    <meta name="og:description" content="ED • portafolio">
-    <meta name="og:image" content="https://66.media.tumblr.com/778aeb4d504d96f2641384c66f5d0a6a/tumblr_ppz5x6Jiin1wvp22vo1_1280.png">
-    <meta name="og:locale" content="es_CL">
-    <meta name="og:type" content="website">
-    <!-- Ahora vinculamos el estilo -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
+    html, body {margin: 0; padding: 0; font-family: 'Fira Mono', monospace;}
+    canvas {display: block;}
+    </style>
+    <title>it's corona time</title>
+  </head>
+  <body>
+      <h1></h1>
+      <script>
+      var a = 40;
+      var b = 320;
+      var c;
+      var nombres = {
+          estudiantes: ["Camila Azócar", "María Paz Concha", "Olga F. Vio", "Trinidad González", "Matías Hagen", "María Francisca Hepp", "María Eliana Infante", "Magdalena Labarca", "Elsa Mora", "Vanessa Müller", "Jana Müller", "Muriel Muñoz", "María Trinidad Noriega", "Rosario Olivares", "Amparo Ortúzar", "Valeria Parraguéz", "Francisco Pezoa", "Francisca Purcell", "Martina Rivas", "Pilar Saavedra", "Lisa Saez", "David Sánchez", "Cecilia Soto", "María Elisa Valdés", "Francisca Vial", "María José Villasante"],
+          profesor: "Felipe Cortez"
+      }
 
-<body>
-    <div id="contenido">
-        <header>
-          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.47 426.47"><title>Untitled-2</title><path class="cls-1" d="M247.92,88.19a146.21,146.21,0,0,1,60.33,12.71,175.53,175.53,0,0,1,50.17,33.52,189.9,189.9,0,0,1,32.82,59.64q11.56,33.75,11.56,64.72,0,49.49-18.73,83.68t-52.7,51.78q-34,17.56-78.83,17.57a149,149,0,0,1-61-12.71,181.19,181.19,0,0,1-50.85-33.52,183.4,183.4,0,0,1-32.36-59.41q-11.1-33.51-11.1-65,0-49.47,18.73-83.69t52.7-51.78Q202.61,88.2,247.92,88.19Zm72.59,138.23q0-18.48-3.24-50.39a529,529,0,0,0-8.33-55.94q-44.37,1.84-73,17.56t-42.76,48.78Q179,219.49,179,273.58q0,19.89,3.46,51.08a448.6,448.6,0,0,0,9,54.33q44.87-2.31,73.05-17.8t42.08-48.31Q320.5,280,320.51,226.42Z" transform="translate(-36.76 -36.76)"/><path class="cls-1" d="M463.24,463.24H36.76V36.76H463.24Zm-416.48-10H453.24V46.76H46.76Z" transform="translate(-36.76 -36.76)"/></svg>
-            <h1>corta y fome</h1>
-            <h2>ED • portafolio</h2>
-        </header>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="media/acuario.mp4" type="video/mp4">
-        </video>
+      function setup() {
+      createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
+      document.getElementsByTagName("h1")[0].append(nombres.estudiantes [2] + " en cuarentena");
+      console.log("la cuarentena me está volviendo loca :)");
+      }
 
-        <h3>QUIENES SOMOS</h3>
-        <div id="somos">
+      function draw() {
+      colorMode(HSB, 360, 100, 100);
+      fill(random (b-90,b),40,100);
+      noStroke();
+      c = a * random (1,2);
+      ellipse(mouseX,mouseY,c,c);
+      frameRate (10)
+      }
 
-            <div class="dupla primera">
-                <h4>Gracia Ortiz</h4>
-                <h5>Diseñadora Integral</h5>
-                <p>Diseño gráfico, editorial, tipografía. La mejor tipógrafa que conocerá esta generación muak</p>
-                <address><a href="mailto:hola@graciaortiz.com">hola@graciaortiz.com</a></address>
-            </div>
-
-            <div class="dupla segunda">
-                <h4>Olga F. Vio</h4>
-                <h5>Diseñadora Integral</h5>
-                <p>Estudiante de diseño, con intereses en industrial, fotografía, publicación y edición. Bartender aficionada de día, escorpión de noche.
-                Tengo una gata que se llama Chanxi y obvio vale la pena mencionarla</p>
-                <address><a href="mailto:olgaf.vio@gmail.com">olgaf.vio@gmail.com</a></address>
-            </div>
-
-            <hr />
-        </div><!-- acá cerramos el div id="somos"-->
-
-        <h3>PORTAFOLIO</h3>
-
-        <div id="portafolio">
-
-            <!--acá se colocan y organizan las cosas con programación-->
-
-        </div><!-- acá cerramos el div id="portafolio"-->
-
-        <footer>
-            <p>Procesos de Producción · sección web · primer semestre · 2019</p>
-            <p> <a href="#"><i class="fab fa-linkedin"></i></a> </p>
-            <p> <a href="#"><i class="fab fa-behance-square"></i></a> </p>
-        </footer>
-
-    </div><!-- acá abajo cerramos el div id="contenido"-->
-
-
-    <!-- Lo que sigue SI es PROGRAMACIÓN -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script>
-        // ESTO SIRVE PARA ARREGLAR CADA ÍTEM DEL PORTAFOLIO COMO ALBAÑILERÍA (MASONRY)
-        window.onload = function() {
-            var container = document.querySelector('#portafolio');
-            var msnry = new Masonry(portafolio, {
-                itemSelector: '.item'
-            });
-        };
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="portafolio.js"></script>
-</body>
-
+      function mouseClicked() {
+      colorMode(HSB, 360, 100, 100);
+          if (b === 320) {b = random(b-a,90); }
+          else {b = 320;
+          }
+      }
+      </script>
+  </body>
 </html>
